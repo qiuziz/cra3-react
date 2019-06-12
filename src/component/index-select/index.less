@@ -1,0 +1,69 @@
+body {
+	background-color: #FFFFFF;
+}
+
+.index-select {
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+
+	.am-indexed-list-container {
+		background: #fff;
+	}
+	.am-indexed-list-quick-search-bar {
+		color: #333333;
+		font-size: 14px;
+		z-index: 10;
+		top: 85px;
+		li {
+			padding: 1px 5px;
+		}
+	}
+
+
+	.am-indexed-list-quick-search-bar-over {
+		background: transparent;
+	}
+
+	.am-list-body {
+		border-top: none;
+		&::before {
+			content: none !important;
+		}
+	}
+	.current-hot-city {
+		.am-indexed-list-section-body {
+			padding-top: 4px;
+			padding-bottom: 25px;
+		}
+	}
+	.am-list-item {
+		width: 100%;
+		padding: 0;
+		
+		.am-list-line {
+			width: 100%;
+			padding: 0;
+			.am-list-content {
+				width: 100%;
+			}
+		}
+	}
+
+	.current-quick {
+		width: 50 * 100vw/375;
+    border-radius: 5 * 100vw/375;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+		background: rgba(0, 0, 0, .5);
+    text-align: center;
+    padding: 10px;
+    z-index: 99;
+    font-size: 24 * 100vw/375;
+    font-weight: 600;
+    line-height: 30 * 100vw/375;
+	}
+}

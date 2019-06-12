@@ -1,0 +1,79 @@
+.geo-location-wrap {
+  width: 100%;
+  height: calc(100vh - 45px);
+
+  .map-box {
+    width: 100%;
+    height: 100%;
+  }
+
+  .BMapLabel {
+    border-radius: 8px;
+  }
+
+  .info-window-content {
+    background-image: url('../../assets/images/map-info-bg.png');
+    background-size: 100% 100%;
+    width: 303px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-family: PingFang-SC-Regular;
+    font-weight: 400;
+    border-radius: 8px;
+
+    .placename {
+      padding-top: 33px;
+      padding-left: 25px;
+      font-size: 17px;
+      font-family: PingFangSC-Medium;
+      font-weight: 500;
+			color: rgba(255, 255, 255, 1);
+			width: 260px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+    }
+
+    .address {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 27px;
+      padding-left: 25px;
+
+      .content {
+        font-size: 13px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        color: rgba(68, 74, 112, 1);
+        width: 250px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .navigate {
+        margin-right: 55px;
+        color: #DDAF2A;
+      }
+    }
+
+
+  }
+}
+
+.BMapLabel {
+  border: none !important;
+  height: 60px;
+  background-color: unset !important;
+  // left: 35px !important;
+  // top: 180px !important;
+}
+
+.BMap_Marker {
+  div {
+    img {
+      width: 100%;
+    }
+  }
+}

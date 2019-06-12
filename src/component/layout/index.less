@@ -1,0 +1,45 @@
+.layout {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  width: 100%;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  header {
+    height: 0;
+    background: #fff;
+    width: 100%;
+    position: relative;
+    z-index: 99;
+    .nav-bar {
+			position: relative;
+			background: rgba(45,45,45,0.98);
+			width: 100%;
+			border-bottom: 1px solid #ddd;
+      .am-navbar-title {
+        font-size: 16px;
+      }
+    }
+  }
+  main {
+    display: flex;
+		flex: 1; 
+		// overflow: hidden;
+    // align-items: center;
+    // justify-content: center;
+    // font-size: 30px;
+    flex-direction: column;
+    .component-content>div {
+      min-height: 100%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+  }
+  footer {
+    height: 50px;
+    display: flex;
+    color: #e0c6c6;
+    align-items: center;
+    justify-content: center;
+  }
+}

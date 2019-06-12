@@ -1,0 +1,68 @@
+
+@font-size: 16px;
+@font-size-base: 14px;
+@hd: 1; // 基本单位
+@spacing-v-xs: 3px * @hd;
+@color-border-grey: #CCC;
+@border-radius-md: 4px * @hd;
+@zindex-divider: 100;
+@color-grey-3: #CCC;
+.cmp-count-down {
+  display: inline-block;
+  min-height: @font-size;
+
+  .cmp-count-down__item {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .cmp-count-down__time-box {
+    display: inline-block;
+    text-align: center;
+    min-width: @font-size;
+    font-size: @font-size-base;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+  }
+
+  .cmp-count-down__separator {
+    font-size: @font-size-base;
+    display: inline-flex;
+    align-items: center;
+    text-align: justify;
+    padding: 0 @spacing-v-xs;
+  }
+
+  .cmp-count-down--card {
+    .cmp-count-down__time-box {
+      padding: @spacing-v-xs 0;
+      border: 1PX solid @color-border-grey;
+      border-radius: @border-radius-md;
+      color: #FF4949;
+      display: inline-block;
+      background-color: #fff;
+      position: relative;
+
+      .cmp-count-down__time {
+        position: relative;
+        z-index: @zindex-divider + 1;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1PX;
+        top: 50%;
+        left: 0;
+        z-index: @zindex-divider;
+        background-color: @color-grey-3;
+      }
+    }
+  }
+}

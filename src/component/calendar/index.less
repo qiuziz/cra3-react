@@ -1,0 +1,115 @@
+.q-calendar {
+	.am-calendar {
+		.content {
+			height: 75%;
+			left: 0;
+			bottom: 0;
+			top: unset;
+			overflow: hidden;
+			border-radius: 15px 15px 0px 0px;
+
+			.week-panel {
+				border-bottom: 0;
+				padding: 20px 2px;
+
+				.cell-grey {
+					color: #FF4F30;
+				}
+			}
+			.wrapper {
+				flex: 1;
+				-webkit-overflow-scrolling: touch;
+
+				.month-title {
+					font-size: 23px;
+					color: #444A70;
+					line-height: 33px;
+				}
+				.single-month {
+					.row {
+						.cell {
+							position: relative;
+							&.disable {
+								pointer-events: none;
+
+								.date-wrapper {
+									z-index: 99;
+									.date {
+										opacity: .1;
+										color: unset;
+										background: unset;
+									}
+								}
+							}
+							.tip {
+								position: absolute;
+								top: 40px;
+								width: 28px;
+								border-radius: 5px;
+								height: 23px;
+								display: inline-block !important;
+								background: #444A70;
+								box-shadow: 0px 2px 20px 0px rgba(41,46,72,0.3);
+								font-size: 12px;
+								font-family: PingFangSC-Medium;
+								font-weight: 500;
+								color: #FFFFFF;
+								overflow: unset;
+								line-height: 23px;
+								&::after {
+									content: '';
+									width: 0;
+									height: 0;
+									position: absolute;
+									bottom: 21px;
+									transform: rotate(180deg);
+									left: 35%;
+									display: block;
+									border-width: 6px;
+									border-style: solid;
+									border-color: #444A70 transparent transparent transparent;
+								}
+							}
+							.info {
+								&.date-selected {
+									display: none;
+								}
+							}
+							.date-wrapper {
+								z-index: 99;
+								.date:not(.disable):not(.date-selected) {
+									color: #444A70;
+									font-weight: normal;
+								}
+								.disable {
+									opacity: .1;
+									color: unset;
+						    	background: unset;
+								}
+								.date-selected {
+									background: #444A70;
+									// box-shadow: 0px 2px 20px 0px rgba(41,46,72,0.3);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.confirm-panel {
+				padding: 0;
+				border: none;
+				.info {
+					display: none;
+				}
+				.button {
+					width: 100%;
+					line-height: 30px;
+					background: #444A70;
+					box-shadow: 0px -2px 10px 0px rgba(195,195,195,0.3);
+					border-radius: unset;
+				}
+			}
+		}
+	}
+}
