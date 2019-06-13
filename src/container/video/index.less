@@ -1,9 +1,150 @@
 .video {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	
+	.player {
+		position: relative;
+		width: 100%;
+		background: #000;
+		.video-react .video-react-big-play-button {
+			display: none;
+		}
+		.video-ctrl {
+			position: absolute;
+			top: calc(50% - 8px);
+	    left: calc(50% - 8px);
+			color: #fff;
+			
+		}
+	
+	}
 
-	// .IIV::-webkit-media-controls-play-button,
-	// .IIV::-webkit-media-controls-start-playback-button {
-	// 		opacity: 0;
-	// 		pointer-events: none;
-	// 		width: 5px;
-	// }
+	.IIV::-webkit-media-controls-play-button,
+	.IIV::-webkit-media-controls-start-playback-button {
+			opacity: 0;
+			pointer-events: none;
+			width: 5px;
+	}
+}
+
+.progress-control {
+	width: 60%;
+	height: 4px;
+	display: flex;
+	// overflow: hidden;
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 2px;
+	.loaded {
+		// background: #afa3f1;
+		background-color: rgba(255, 255, 255, 0.6);
+		height: 4px;
+		position: absolute;
+		z-index: 1;
+	}
+	.played {
+		background-color: rgb(15, 136, 235);
+		height: 4px;
+		position: absolute;
+		z-index: 2;
+		
+		&::after {
+			content: ' ';
+			position: absolute;
+			right: 0;
+			top: 1px;
+			display: block;
+			width: 1em;
+			height: 1em;
+			background-color: rgb(255, 255, 255);
+			transform: scale(1);
+			margin: -0.5em;
+			border-radius: 50%;
+			transition: -ms-transform 300ms ease 0s, -webkit-transform 300ms ease 0s, transform 300ms ease 0s;
+		}
+	}
+}
+
+.control-bar-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	color: #fff;
+	.control-bar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: absolute;
+		bottom: 0;
+		height: 50px;
+		width: 100%;
+		background-color: rgba(43, 51, 63, 0.7);
+
+		.option-btn {
+			width: 30%;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+
+			.times {
+				width: 50%;
+				text-align: center;
+
+				.time {
+					min-width: 45%;
+					display: inline-block;
+					text-align: center;
+				}
+			}
+
+			.volume-ctrl {
+				position: relative;
+				
+				.volume-progress {
+					position: absolute;
+					bottom: 25px;
+					left: 5px;
+					width: 4px;
+					background: #fff;
+					height: 100px;
+					background-color: rgba(255, 255, 255, 0.3);
+					display: flex;
+					// overflow: hidden;
+					border-radius: 2px;
+			
+					.current-volume {
+						background-color: #fff;
+						width: 4px;
+						height: 100%;
+						position: absolute;
+						bottom: 0;
+						z-index: 2;
+						border-radius: 2px;
+						&::after {
+							content: ' ';
+							position: absolute;
+							right: 2px;
+							top: 0;
+							display: block;
+							width: 1em;
+							height: 1em;
+							background-color: rgb(255, 255, 255);
+							transform: scale(1);
+							margin: -0.5em;
+							border-radius: 50%;
+							transition: -ms-transform 300ms ease 0s, -webkit-transform 300ms ease 0s, transform 300ms ease 0s;
+						}
+					}
+				}
+			}
+		}
+
+		.icon-full-screen {
+			padding-right: 10px;
+		}
+	}
+	
 }

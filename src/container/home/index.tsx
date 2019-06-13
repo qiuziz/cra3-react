@@ -47,7 +47,7 @@ export class Home extends React.Component<PropsType, any> {
 						routes.map((route: any, index: number) => {
 							if (route.path !== '/home') {
 							return <List.Item key={index} arrow="horizontal">
-											<button onClick={this.go(route.path)}>{route.title}</button>
+											<span onClick={this.go(route.path)}>{route.title}</span>
 										</List.Item>
 							}
 							return null;
