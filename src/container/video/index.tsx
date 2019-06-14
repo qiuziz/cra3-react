@@ -3,7 +3,7 @@
  * @Github: <https://github.com/qiuziz>
  * @Date: 2019-06-12 12:49:15
  * @Last Modified by: qiuz
- * @Last Modified time: 2019-06-14 17:03:55
+ * @Last Modified time: 2019-06-14 17:04:53
  */
 
 import * as React from 'react';
@@ -53,7 +53,7 @@ export class Video extends React.Component<PropsType, any> {
 				<div className="player">
 				<i className={`iconfont video-ctrl icon-${play ? '' : 'play'}`} onClick={this.videoControl} />
 					<video width="100%" >
-						<source src={MP4} />
+						<source src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
 					</video>
 				</div>
 			</div>
