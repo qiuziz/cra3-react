@@ -3,7 +3,7 @@
  * @Github: <https://github.com/qiuziz>
  * @Date: 2018-12-20 20:27:51
  * @Last Modified by: qiuz
- * @Last Modified time: 2019-06-11 16:59:56
+ * @Last Modified time: 2019-06-14 16:29:38
  */
 
 /**
@@ -132,7 +132,7 @@ export function setupWebViewJavascriptBridge(callback: any = () => { }) {
 	setTimeout(function () { document.documentElement.removeChild(WVJBIframe) }, 0)
 }
 
-PLATFORM !== 'isWX' && setupWebViewJavascriptBridge();
+// PLATFORM !== 'isWX' && setupWebViewJavascriptBridge();
 
 export const callAppRouter = (method: string, params: object, callback?: (res: object) => void) => {
 	if (PLATFORM === 'iOS') {
